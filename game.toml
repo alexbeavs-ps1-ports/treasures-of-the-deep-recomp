@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Treasures of the Deep"
+id = "SCES-00850"
+players = 1
+exe = "disc/SCES_008.50"
+disc = "disc/Treasures of the Deep (Europe).cue"
+discs = ["disc/Treasures of the Deep (Europe).cue"]
+disc_serials = ["SCES-00850"]
+load_address = "0x80010000"
+entry_pc = "0x80015F90"
+text_size = "0x0002B800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Treasures of the Deep (Europe) (Track 1).bin"
+cue_name = "Treasures of the Deep (Europe).cue"
+boot_exe = "SCES_008.50"
+known_sizes = [451656912]
+known_md5 = [
+  "d0db17975fa7e683bfdd4508086d2e6e",
+]
+known_sha1 = [
+  "5466aa2a0cb36a1d79c5a0d5c602b1bb417fab74",
+]
+known_crc32 = [
+  "cd4e7105",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Treasures of the Deep Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 3
+required_disc_fp = "35728991d542bca62ff0280532dd9d9d1bdddc75db1ff3b8babc1c041e757514"

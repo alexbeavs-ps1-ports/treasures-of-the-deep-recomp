@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Treasures of the Deep",
+    "id": "SCES-00850",
+    "boot_exe": "SCES_008.50"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Treasures of the Deep (Europe).cue",
+    "bin_name": "Treasures of the Deep (Europe) (Track 1).bin",
+    "track_counts": [
+      3
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 451656912,
+      "md5": "d0db17975fa7e683bfdd4508086d2e6e",
+      "sha1": "5466aa2a0cb36a1d79c5a0d5c602b1bb417fab74",
+      "crc32": "cd4e7105"
+    },
+    "disc_fp": "35728991d542bca62ff0280532dd9d9d1bdddc75db1ff3b8babc1c041e757514"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x80015F90",
+    "text_size": "0x0002B800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 352,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Treasures of the Deep",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "treasures-of-the-deep-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SCES-00850"
+  }
+}
